@@ -178,10 +178,3 @@ Contributions are welcome! Please:
 ## License
 
 Distributed under the **MIT License**. See [LICENSE](LICENSE) for details.
-
----
-
-> **Resume bullet:** Built production RAG pipeline processing PDF documents with LangChain + ChromaDB + HuggingFace embeddings, enabling semantic Q&A with zero API cost using local Ollama LLM
-=======
-# rag-pipeline-langchain
->>>>>>> 9139a35fd0ebd7c5116901452a02567b1e6758bd
