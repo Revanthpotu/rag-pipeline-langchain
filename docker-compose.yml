@@ -1,0 +1,34 @@
+version: "3.9"
+
+services:
+  # ── Ollama (local LLM server) ──────────────────────────────────────────
+  ollama:
+    image: ollama/ollama:latest
+    container_name: rag-ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    restart: unless-stopped
+
+  # ── RAG Pipeline (Streamlit app) ───────────────────────────────────────
+  app:
+    build: .
+    container_name: rag-app
+    ports:
+      - "8501:8501"
+    volumes:
+      - chroma_data:/app/chroma_db
+      - upload_data:/app/uploaded_pdfs
+    environment:
+      - OLLAMA_BASE_URL=http://ollama:11434
+      - CHROMA_PERSIST_DIR=/app/chroma_db
+      - UPLOAD_DIR=/app/uploaded_pdfs
+    depends_on:
+      - ollama
+    restart: unless-stopped
+
+volumes:
+  ollama_data:
+  chroma_data:
+  upload_data:
