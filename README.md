@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 📄 RAG Pipeline with LangChain
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)
@@ -182,3 +183,6 @@ Distributed under the **MIT License**. See [LICENSE](LICENSE) for details.
 ---
 
 > **Resume bullet:** Built production RAG pipeline processing PDF documents with LangChain + ChromaDB + HuggingFace embeddings, enabling semantic Q&A with zero API cost using local Ollama LLM
+=======
+# rag-pipeline-langchain
+>>>>>>> 9139a35fd0ebd7c5116901452a02567b1e6758bd
